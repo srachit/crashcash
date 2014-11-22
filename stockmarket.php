@@ -82,6 +82,7 @@ $userStockData = $stockGrabber->grabSpecific(explode(",", $playerStocks));
 
                     </ul>
                     <ul class="nav nav-sidebar">
+                        <li><a href="bank.php">Bank</a></li>
                         <li><a href="gamble.php">Gambling</a></li>
                         <li><a href="elearn.php">Learn And Earn!</a></li>
                     </ul>

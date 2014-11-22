@@ -16,6 +16,13 @@ $player3 = mysql_fetch_array($player2);
 $playerName = $player3['name']; 
 $playerEducation = $player3['profession'];
 $playerMoney = $player3['tmoney'];
+$playerIntelligence = $player3['intelligence'];
+$playerEnergy = $player3['tenergy'];
+$playerTime = $player3['time'];
+$playerTLoan = $player3['total_loan'];
+$playerTLoan2 = $player3['loan'];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +38,7 @@ $playerMoney = $player3['tmoney'];
         <link href="CSS/bootstrap.min.css" rel="stylesheet">
         <link href="CSS/font-awesome.min.css" rel="stylesheet">
         <link href="CSS/style.css" rel="stylesheet">
+        <link href="CSS/game.css" rel="stylesheet">
     </head>
 
     <body>
@@ -64,24 +72,25 @@ $playerMoney = $player3['tmoney'];
                     <div class=row>
                         <div class="col-sm-3 col-md-2 sidebar">
                             <ul class="nav nav-sidebar">
-                                <li><a href="game.php">Overview <span class="sr-only">(current)</span></a></li>
+                                <li><a href="#">Overview <span class="sr-only">(current)</span></a></li>
                                 <li><a href="stockmarket.php">Stock Market</a></li>
                                 <li><a href="education.php">Education</a></li>
                                 <li><a href="loan.php">Loan</a></li>
                             </ul>
                             <ul class="nav nav-sidebar">
+                                <li class="active"><a href="bank.php">Bank</a></li>
                                 <li><a href="gamble.php">Gambling</a></li>
-                                <li class="active"><a href="elearn.php">Learn And Earn!</a></li>
+                                <li><a href="elearn.php">Learn And Earn!</a></li>
                             </ul>
                         </div>
                     </div>
                 </div><!-- /.container-fluid -->
             </div>
-        </nav>
+        </nav><!-- End of Navbar -->
         
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe width="100" height="100" class="embed-responsive-item" frameborder="0" src="//www.youtube.com/embed/N-8uFw99IMw"></iframe>
-            </div>
+        
+        
+        
         
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

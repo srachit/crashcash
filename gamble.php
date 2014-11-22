@@ -91,6 +91,7 @@
 
                         </ul>
                         <ul class="nav nav-sidebar">
+                            <li><a href="bank.php">Bank</a></li>
                             <li class="active"><a href="#">Gambling <span class="sr-only">(current)</span></a>
                             <li><a href="elearn.php">Learn And Earn!</a></li>
                             </li>

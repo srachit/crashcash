@@ -18,6 +18,11 @@
     $playerMoney = $player3['tmoney'];
     $playerIntelligence = $player3['intelligence'];
     $playerEnergy = $player3['tenergy'];
+    $playerTime = $player3['time'];
+    $playerTLoan = $player3['total_loan'];
+    $playerTLoan2 = $player3['loan'];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -73,6 +78,7 @@
                         <li><a href="loan.php">Loan</a></li>
                     </ul>
                     <ul class="nav nav-sidebar">
+                        <li><a href="bank.php">Bank</a></li>
                         <li><a href="gamble.php">Gambling</a></li>
                         <li><a href="elearn.php">Learn And Earn!</a></li>
                     </ul>
@@ -102,6 +108,9 @@
         <div class="row">
             <div class="box2 col-md-3">
                 <h3 class="text-center">Loan Information</h3>
+                <p>Loan Taken: <?php echo $playerTLoan2; ?></p>
+                <p>Money To Pay Back: <?php echo $playerTLoan; ?></p>
+                <p>Time Left To Pay Back: <?php echo $playerTime; ?></p>
             </div>
         </div> 
     </div>

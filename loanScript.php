@@ -22,7 +22,7 @@
     if(isset($_POST['upgrade']))
     {
         if ($playerIntelligence == 1 && $playerGotLoan == false){
-                $updateplayer = "Update players set loan=20000, interest = 20, tmoney = tmoney + loan, total_loan = total_loan + loan + 4000, any_loan = true where name='$playerName'";
+                $updateplayer = "Update players set loan=20000, interest = 20, tmoney = tmoney + loan, total_loan = total_loan + loan + 4000, time=15, any_loan = true where name='$playerName'";
                 mysql_query($updateplayer) or die("no Loan given");
 
                 print   "Upgraded to Starbucks!";
