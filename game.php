@@ -66,7 +66,7 @@
                     <ul class="nav nav-sidebar">
                         <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
                         <li><a href="#">Stock Market</a></li>
-                        <li><a href="#">Education</a></li>
+                        <li><a href="education.php">Education</a></li>
                     </ul>
                     <ul class="nav nav-sidebar">
                         <li><a href="gamble.php">Gambling</a></li>
@@ -76,11 +76,6 @@
       </div><!-- /.container-fluid -->
     </nav><!-- End of Navbar -->
 
-    <div>
-      <form action="education.php" class="navbar-form navbar-right" role="search">
-        <button type="submit" name="upgrade" class="btn btn-default">Click here to upgrade!</button>
-      </form> 
-    </div>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

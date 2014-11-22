@@ -4,15 +4,21 @@
     margin-right: 30px;
     padding-top: 30px;
     padding-bottom: 30px;
-    margin-bottom: 30px;
 }
 
 #gambleContainer{
     padding-left: 200px;
 }
 
+#gambleGame{
+    padding-left: 200px;
+    padding-top: 30px;
+
+}
+
+
 .gambleForm{
-    max-width: 30px;
+    max-width: 330px;
     padding: 15px;
     margin: 0 auto;
 }

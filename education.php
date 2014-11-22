@@ -26,41 +26,44 @@ if ($playerIntelligence == 1){
         print   "Upgraded to Starbucks!";
     }
     else{
-    echo "Not Enough Money to Upgrade";
+        print "Not Enough Money to sax";
     }
 } 
 
-else if ($playerTmoney >= 150000){
-     if ($playerIntelligence == 2){
+else if ($playerIntelligence == 2){ 
+    if ($playerTmoney >= 150000){ 
         $updateplayer = "update players set money=12000, intelligence=3, energy=20, profession='Professional', tmoney = tmoney -150000 where name='$playerName'";
         mysql_query($updateplayer) or die("Could not update Professional");
 
         print   "Upgraded to Professional!";
     }
-}else{
-    print "Not Enough Money to Upgrade"
+    else{
+    print "Not Enough Money to sex";
+    }
 }
 
-else if ($playerTmoney >= 450000){
-     if ($playerIntelligence == 3){
+else if ($playerIntelligence == 3){
+    if ($playerTmoney >= 450000){
         $updateplayer = "update players set money=24000, intelligence=4, energy=30, profession='Manager', tmoney = tmoney -450000 where name='$playerName'";
         mysql_query($updateplayer) or die("Could not update Manager");
 
         print   "Upgraded to Manager!";
     }
-}else{
-    print   "Not Enough Money to Upgrade"
+    else{
+    print   "Not Enough Money to sax";
+    }
 }
 
-else if ($playerTmoney >= 1350000){
-     if ($playerIntelligence == 4){
+else if ($playerIntelligence == 4){
+    if ($playerTmoney >= 1350000){
         $updateplayer = "update players set money=48000, intelligence=5, energy=40, profession='CEO', tmoney = tmoney -1350000 where name='$playerName'";
         mysql_query($updateplayer) or die("Could not update CEO");
 
         print   "Upgraded to CEO!";
     }
-}else{
-    print   "Not Enough Money to Upgrade"
+    else{
+    print   "Not Enough Money to Upgrade";
+    }
 }
 
 ?>
@@ -102,8 +105,8 @@ else if ($playerTmoney >= 1350000){
           </form>
           <ul class="nav navbar-nav navbar-right">
               <li><p class="navbar-text"><span class="navglyp glyphicon glyphicon-user" aria-hidden="true"></span><?php echo $playerName; ?></p></li>   
-              <li><p class="navbar-text"><i class="navglyp fa fa-suitcase"></i><?php echo $playerEducation; ?></p></li>
-              <li><p class="navbar-text"><i class="navglyp fa fa-money"></i><?php echo $playerMoney; ?></p></li>
+              <li><p class="navbar-text"><i class="navglyp fa fa-suitcase"></i><?php echo $playerProfession; ?></p></li>
+              <li><p class="navbar-text"><i class="navglyp fa fa-money"></i><?php echo $playerTmoney; ?></p></li>
           </ul>
         </div><!-- /.navbar-collapse -->
         
@@ -111,23 +114,73 @@ else if ($playerTmoney >= 1350000){
             <div class=row>
                 <div class="col-sm-3 col-md-2 sidebar">
                     <ul class="nav nav-sidebar">
-                        <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                        <li><a href="game.php">Overview <span class="sr-only">(current)</span></a></li>
                         <li><a href="#">Stock Market</a></li>
-                        <li><a href="#">Education</a></li>
+                        <li class="active"><a href="#">Education</a></li>
                     </ul>
                     <ul class="nav nav-sidebar">
-                        <li><a href="">Gambling</a></li>
+                        <li><a href="gambling.php">Gambling</a></li>
                     </ul>
                 </div>
             </div>
       </div><!-- /.container-fluid -->
     </nav><!-- End of Navbar -->
 
-    <div>
-      <form action="education.php" class="navbar-form navbar-right" role="search">
-        <button type="submit" name="upgrade" class="btn btn-default">Click here to upgrade!</button>
-      </form> 
+    <div class="section">
+
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Panel heading</div>
+
+          <!-- Table -->
+          <table class="table">
+            <thead>
+                <tr>
+                    <th>Upgrade To</th>
+                    <th>Course Name</th>
+                    <th>Course Cost($)</th>
+                    <th>Upgrade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Starbucks</th>
+                    <th>Customer Service Training</th>
+                    <th>50000</th>
+                    <th><form action="education.php" class="navbar-form navbar-right" role="search">
+        <button type="submit" name="upgrade" class="btn btn-default btn-success">Click here to upgrade!</button>
+      </form> </th>
+                </tr>
+                <tr>
+                    <th>Professional</th>
+                    <th>Bachelors Degree</th>
+                    <th>150000</th>
+                    <th><form action="education.php" class="navbar-form navbar-right" role="search">
+        <button type="submit" name="upgrade" class="btn btn-default btn-success">Click here to upgrade!</button>
+      </form> </th>
+                </tr>
+                <tr>
+                    <th>Manager</th>
+                    <th>MBA</th>
+                    <th>450000</th>
+                    <th><form action="education.php" class="navbar-form navbar-right" role="search">
+        <button type="submit" name="upgrade" class="btn btn-default btn-success">Click here to upgrade!</button>
+      </form> </th>
+                </tr>
+                <tr>
+                    <th>CEO</th>
+                    <th>Entrepreneurship</th>
+                    <th>1350000</th>
+                    <th><form action="education.php" class="navbar-form navbar-right" role="search">
+        <button type="submit" name="upgrade" class="btn btn-default btn-success">Click here to upgrade!</button>
+      </form> </th>
+                </tr>
+            </tbody>
+          </table>
+        </div>
     </div>
+
+
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>

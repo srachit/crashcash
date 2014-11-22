@@ -85,7 +85,7 @@
                             </li>
                             <li><a href="#">Stock Market</a>
                             </li>
-                            <li><a href="#">Education</a>
+                            <li><a href="education.php">Education</a>
                             </li>
                         </ul>
                         <ul class="nav nav-sidebar">
@@ -106,22 +106,19 @@
                 <p class="text-center">But dont forget, the odds are stalked against you in a real casino.</p>
             </div>
         </div>
+
         
-        <div class="row">
-            <div class="col-md-12 col-md-offset-3">
-                <div id="gambleGame" class="container">
-                    <div class="success"></div>
-                    <div class="fail"></div>
-                    <div class="gameDetails">
-                        <form class="gambleForm" role="form">
-                            <div class="form-group">
-                                <label for="numGuess">Guess a number between 1-10!</label>
-                                <input type="number" class="form-control" id="numGuess" placeholder="Enter Guess">
-                            </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </form>
+        <div class="container">
+            <div id="succes" class="alert alert-success">You Won!</div>
+            <div id="fail" class="alert alert-danger">You Lose :(</div>                
+            <div class="gameDetails">
+                <form class="gambleForm" role="form">
+                    <div class="form-group">
+                        <label for="numGuess">Guess a number between 1-10!</label>
+                        <input type="number" class="form-control" id="numGuess" placeholder="Enter Guess">
                     </div>
-                </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
             </div>
         </div>
 
