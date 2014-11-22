@@ -47,10 +47,12 @@
             else
             {
                 $password = md5($password);
-                $SQL = "INSERT into players(name, password, email) VALUES('$player', '$password', 'email')";
+                $SQL = "INSERT into players(name, password, email, money, intelligence, energy, profession, gambleLoss, tmoney)
+                                     VALUES('$player', '$password', '$email', '3000', '1', '5', 'Janitor', '0', '3000')";
                 mysql_query($SQL) or die ("Could not register");
 
                 print   "Thank you for registering!";
+                echo    "<a href='index.php'>Go back to main page and login!</a><br>";
             }
         }
     }
