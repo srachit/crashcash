@@ -10,7 +10,7 @@
         $password = strip_tags($password);
         $password = md5($password);
 
-        $query = "SELECT name, password from players where name='$player' and '$password'";
+        $query = "SELECT name, password from players where name='$player' and password='$password'";
         $result = mysql_query($query) or die ("Could not query players");
         $result2 = mysql_fetch_array($result);
 

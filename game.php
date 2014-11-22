@@ -13,7 +13,7 @@
     $player1 = "SELECT * from players where name = '$player'";
     $player2 = mysql_query($player1) or die ("could not select players");
     $player3 = mysql_fetch_array($player2);
-    $playerName = "You are logged in as " . $player3['name']; 
+    $playerName = $player3['name']; 
 
     ?>
 
@@ -29,6 +29,7 @@
     <!-- Bootstrap -->
     <link href="CSS/bootstrap.min.css" rel="stylesheet">
     <link href="CSS/font-awesome.min.css" rel="stylesheet">
+    <link href="CSS/style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -49,8 +50,6 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Stock Market</a></li>
-            <li><a href="#">Education</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Personal Information <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
@@ -68,9 +67,24 @@
             <button type="submit" name="logout" class="btn btn-default">Logout</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><p id="userStyle"><?php echo $playerName; ?></p></li>
+              <li><p class="navbar-text"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><?php echo $playerName; ?></p></li>
+            
           </ul>
         </div><!-- /.navbar-collapse -->
+        
+        <div class="container-fluid">
+            <div class=row>
+                <div class="col-sm-3 col-md-2 sidebar">
+                    <ul class="nav nav-sidebar">
+                        <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Stock Market</a></li>
+                        <li><a href="#">Education</a></li>
+                    </ul>
+                    <ul class="nav nav-sidebar">
+                        <li><a href="">Gambling</a></li>
+                    </ul>
+                </div>
+            </div>
       </div><!-- /.container-fluid -->
     </nav><!-- End of Navbar -->
 

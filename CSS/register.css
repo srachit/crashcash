@@ -78,9 +78,9 @@ body {
 }
 
 #userStyle{
-    padding-top: 15px !important;
-    font-size: 15px !important;
-    position: relative !important;
-    display: block !important;
-    color: #777 !important;
+    padding-top: 15px;
+    font-size: 15px;
+    position: relative;
+    display: block;
+    color: #777;
 }
