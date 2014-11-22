@@ -36,7 +36,7 @@
         else
         {
             $isaddress = "SELECT * from players where email='$email'";
-            $isaddress2 = mysql_query(isaddress) or die ("not able to query for email");
+            $isaddress2 = mysql_query($isaddress) or die ("not able to query for email");
             $isaddress3 = mysql_fetch_array($isaddress2);
             if($isaddress3)
             {
