@@ -3,19 +3,19 @@ $("#gambleButton").click(function (event) {
     event.preventDefault();
     $(".alert").hide();
 
-    if ($("#city").val() != "") {
-        $.get("scrapper.php?city="+$("#city").val(), function (data) {
-            if(data=="")
+    if ($("#numGuess").val() < 10) {
+        $.get("gambleScript.php?numGuess="+$("#numGuess").val()+"&gambleBet="+$("#gambleBet") , function (data) {
+            if(data=="lose")
             {
                 $("#fail").fadeIn();   
             }
-            else
+            else 
             {
-                $("#succes").html(data).fadeIn();
+                $("#succes").fadeIn();
             }
         });
     }
     else{
-        $("#noCity").fadeIn();   
+        $("#Less").fadeIn();   
     }
 });

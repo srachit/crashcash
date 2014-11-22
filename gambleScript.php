@@ -17,17 +17,30 @@
     $playerEducation = $player3['profession'];
     $playerMoney = $player3['tmoney'];
 
-    $numGuessed = $_POST['numGuess'];
-    $bet = $_POST['gambleBet'];
+    $numGuessed = (int)$_GET['numGuess'];
+    $bet = (int)$_GET['gambleBet'];
     $correct = rand(1, 10);
 
-    if($numGussed > 10)
+    if($numGuessed > 10)
     {
-        echo    "Entere a number below 10 please";
+        echo    "Enter a number below 10 please";
     }
     else
     {
-        if($numGuessed );
+        if($numGuessed == $correct)
+        {
+            $moneyWon = $playerMoney + ($bet*10);
+            $updateplayer = "Update players set tmoney ='$moneyWon' where name='$playerName'";
+            mysql_query($updateplayer) or die("Could not update money won");
+            echo    "won";
+        }
+        else
+        {
+            $moneyLost = $playerMoney - ($bet*2);
+            $updateplayer = "Update players set tmoney ='$moneyLost' where name='$playerName'";
+            mysql_query($updateplayer) or die("Could not update money lost");
+            echo    "lose";
+        }
     }
 
 ?>
