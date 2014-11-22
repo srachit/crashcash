@@ -17,7 +17,7 @@
 	$playerIntelligence = $player3['intelligence'];
 	$playerMoney = $player3['tmoney'];
     $playerEducation = $player3['profession'];
-    $playerLoan = $player3['tloan'];
+    $playerLoan = $player3['total_loan'];
 ?>
 
 <!DOCTYPE html>
@@ -127,11 +127,21 @@
       
           	<div class="panel panel-default">
           		<form method="post" action="loanScript.php" class="navbar-form navbar-right" >
-        <button type="submit" name="upgrade" class="btn btn-default btn-success">Get Loan!</button>
-      </form>
-			  <div class="panel-body">
-			    <p>Your loans: <?php echo $playerLoan; ?></p>
-			  </div>
+                    <button type="submit" name="upgrade" class="btn btn-default btn-success">Get Loan!</button>
+                </form>
+
+                <form method="post" class="form-signup" role="form" action="resetLoan.php">
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="loanAmount" id="loanAmount" placeholder="tpye amount">
+                        <button type="submit" name="loanAmount" class="btn btn-default btn-success">Pay Loan!</button>
+                    </div>
+                </form>
+            </div>
+
+
+        
+	    <div class="panel-body">
+			<p>Your loans: <?php echo $playerLoan; ?></p>
 			</div>
         </div>
     </div>
