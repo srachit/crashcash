@@ -34,7 +34,7 @@
             $updateplayer = "Update players set loan=0, interest = 0, tmoney = '$random', total_loan = 0, any_loan = false where name='$playerName'";
             mysql_query($updateplayer) or die("no Loan paid back!");
 
-            print   "something print here";
+            header("Location: game.php");
     }
     else{
         $random = $playerMoney - $loanPayback;
@@ -42,7 +42,7 @@
          $updateplayer = "Update players set tmoney ='$random', total_loan ='$random2' where name='$playerName'";
         mysql_query($updateplayer) or die("no Loan paid back at all!");
 
-        print   "something print here please";
+        header("Location: game.php");
     }
 
 ?>

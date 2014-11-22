@@ -26,29 +26,34 @@
                 mysql_query($updateplayer) or die("no Loan given");
 
                 print   "You've got a 20000 loan";
-            }
+                header("refresh:1; url=game.php");
+        }
 
         else if ($playerIntelligence == 2 && $playerGotLoan == false){
                 $updateplayer = "update players set loan=50000, interest = 30, tmoney = tmoney + loan, total_loan = total_loan + loan + 15000, time=18, any_loan = true where name='$playerName'";
                 mysql_query($updateplayer) or die("no Loan given");
 
                 print   "You've got a 50000 loan";
-            }
+                header("refresh:1; url=game.php");
+
+        }
 
         else if ($playerIntelligence == 3 && $playerGotLoan == false){
                 $updateplayer = "update players set loan=120000, interest = 40, tmoney = tmoney + loan, total_loan = total_loan + loan + 48000, time=21, any_loan = true where name='$playerName'";
                 mysql_query($updateplayer) or die("no Loan given");
 
                 print   "You've got a 120000 loan";
-            }
+                header("refresh:1; url=game.php");
+        }
 
         else if ($playerIntelligence == 4 && $playerGotLoan == false){
                 $updateplayer = "update players set loan=400000, interest = 50, tmoney = tmoney + loan, total_loan = total_loan + loan + 200000, time=33, any_loan = true where name='$playerName'";
                 mysql_query($updateplayer) or die("no Loan given");
 
                 print   "You've got a 400000 loan";
-            }
+                header("refresh:1; url=game.php");
         }
+    }
 
 
     $playerIntelligence = $player3['intelligence'];
