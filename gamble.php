@@ -90,6 +90,7 @@
                         </ul>
                         <ul class="nav nav-sidebar">
                             <li class="active"><a href="#">Gambling <span class="sr-only">(current)</span></a>
+                            <li><a href="elearn.php">Learn And Earn!</a></li>
                             </li>
                         </ul>
                     </div>

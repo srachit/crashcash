@@ -128,6 +128,7 @@ if(isset($_POST['upgrade']))
                     </ul>
                     <ul class="nav nav-sidebar">
                         <li><a href="gamble.php">Gambling</a></li>
+                        <li><a href="elearn.php">Learn And Earn!</a></li>
                     </ul>
                 </div>
             </div>
