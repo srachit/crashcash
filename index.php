@@ -23,7 +23,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Crash Cash</a>
+          <a class="navbar-brand" href="index.php">Crash Cash</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -45,7 +45,7 @@
             </li> -->
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Register</a></li>
+            <li><a href="register.php">Register</a></li>
           </ul>
           <form class="navbar-form navbar-right" role="search">
               <div class="form-group">
