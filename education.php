@@ -18,26 +18,22 @@ $playerName = $player3['name'];
 $playerTmoney = $player3['tmoney'];
 $playerProfession = $player3['profession'];
 
-if ($playerTmoney >= 50000){
-    if ($playerIntelligence == 1){
-
+if ($playerIntelligence == 1){
+    if ($playerTmoney >= 50000){
         $updateplayer = "update players set money=6000, intelligence=2, energy=10, profession='Starbucks', tmoney = tmoney -50000 where name='$playerName'";
         mysql_query($updateplayer) or die("Could not update starbucks");
 
         print   "Upgraded to Starbucks!";
     }
-} else{
+    else{
     print "Not Enough Money to Upgrade"
-}
+    }
+} 
 
 else if ($playerTmoney >= 150000){
      if ($playerIntelligence == 2){
         $updateplayer = "update players set money=12000, intelligence=3, energy=20, profession='Professional', tmoney = tmoney -150000 where name='$playerName'";
         mysql_query($updateplayer) or die("Could not update Professional");
-
-        // $SQL = "UPDATE into players(money, intelligence, energy, profession, tmoney)
-        //                      VALUES('12000', '3', '20', 'Professional', '$tmoney - 150000')";
-        // mysql_query($SQL) or die ("Could not update");
 
         print   "Upgraded to Professional!";
     }
@@ -50,14 +46,10 @@ else if ($playerTmoney >= 450000){
         $updateplayer = "update players set money=24000, intelligence=4, energy=30, profession='Manager', tmoney = tmoney -450000 where name='$playerName'";
         mysql_query($updateplayer) or die("Could not update Manager");
 
-        // $SQL = "UPDATE into players(money, intelligence, energy, profession, tmoney)
-        //                      VALUES('24000', '4', '30', 'Manager', '$tmoney - 450000')";
-        // mysql_query($SQL) or die ("Could not update");
-
         print   "Upgraded to Manager!";
     }
 }else{
-    print "Not Enough Money to Upgrade"
+    print   "Not Enough Money to Upgrade"
 }
 
 else if ($playerTmoney >= 1350000){
@@ -65,14 +57,10 @@ else if ($playerTmoney >= 1350000){
         $updateplayer = "update players set money=48000, intelligence=5, energy=40, profession='CEO', tmoney = tmoney -1350000 where name='$playerName'";
         mysql_query($updateplayer) or die("Could not update CEO");
 
-        // $SQL = "UPDATE into players(money, intelligence, energy, profession, tmoney)
-        //                      VALUES('48000', '5', '40', 'CEO', '$tmoney - 1350000')";
-        // mysql_query($SQL) or die ("Could not update");
-
         print   "Upgraded to CEO!";
     }
 }else{
-    print "Not Enough Money to Upgrade"
+    print   "Not Enough Money to Upgrade"
 }
 
 ?>
