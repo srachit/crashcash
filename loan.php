@@ -18,6 +18,7 @@
 	$playerMoney = $player3['tmoney'];
     $playerEducation = $player3['profession'];
     $playerLoan = $player3['total_loan'];
+    $playerTime = $player3['time'];
 ?>
 
 <!DOCTYPE html>
@@ -141,7 +142,7 @@
 
         
 	    <div class="panel-body">
-			<p>Your loans: <?php echo $playerLoan; ?></p>
+			<p>Your loans: <?php echo $playerLoan; ?> Time remaining: <?php echo $playerTime; ?></p>
 			</div>
         </div>
     </div>
