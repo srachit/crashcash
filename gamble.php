@@ -112,7 +112,7 @@
             <div id="succes" class="alert alert-success">You Won!</div>
             <div id="fail" class="alert alert-danger">You Lose :(</div>                
             <div class="gameDetails">
-                <form class="gambleForm" role="form">
+                <form method="post" action="gambleScript.php" class="gambleForm" role="form">
                     <div class="form-group">
                         <label for="numGuess">Guess a number between 1-10!</label>
                         <input type="number" min="1" max="10" class="form-control" name="numGuess" id="numGuess" placeholder="Enter Guess">
@@ -121,7 +121,7 @@
                         <label for="gambleBet">Bet</label>
                         <input type="number" class="form-control" name="gambleBet" id="gambleBet" placeholder="Enter Guess">
                     </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button id="gambleButton" type="submit" class="btn btn-default">Submit</button>
                 </form>
             </div>
         </div>
@@ -132,6 +132,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="JS/bootstrap.min.js"></script>
+        <script src="JS/gamble.js"></script>
         </body>
 
 </html>

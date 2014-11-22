@@ -14,12 +14,11 @@ else
 $player1 = "SELECT * from players where name = '$player'";
 $player2 = mysql_query($player1) or die ("could not select players");
 $player3 = mysql_fetch_array($player2);
-$playerIntelligence = $player3['intelligence'];
 $playerName = $player3['name'];
+$playerIntelligence = $player3['intelligence'];
 $playerTmoney = $player3['tmoney'];
-$playerProfession = $player3['profession'];
 
-if(isset($_POST['submit']))
+if(isset($_POST['upgrade']))
     {
         if ($playerIntelligence == 1){
             if ($playerTmoney >= 50000){
@@ -69,6 +68,11 @@ if(isset($_POST['submit']))
             }
         }
     }
+
+    $playerIntelligence = $player3['intelligence'];
+    $playerName = $player3['name'];
+    $playerTmoney = $player3['tmoney'];
+    $playerProfession = $player3['profession'];
 
 ?>
 
@@ -123,7 +127,7 @@ if(isset($_POST['submit']))
                         <li class="active"><a href="#">Education</a></li>
                     </ul>
                     <ul class="nav nav-sidebar">
-                        <li><a href="gambling.php">Gambling</a></li>
+                        <li><a href="gamble.php">Gambling</a></li>
                     </ul>
                 </div>
             </div>
@@ -151,7 +155,7 @@ if(isset($_POST['submit']))
                     <th>Starbucks</th>
                     <th>Customer Service Training</th>
                     <th>50000</th>
-                    <th><form action="education.php" class="navbar-form navbar-right" role="search">
+                    <th><form method="post" action="education.php" class="navbar-form navbar-right" >
         <button type="submit" name="upgrade" class="btn btn-default btn-success" id="2">Click here to upgrade!</button>
       </form> </th>
                 </tr>
@@ -159,7 +163,7 @@ if(isset($_POST['submit']))
                     <th>Professional</th>
                     <th>Bachelors Degree</th>
                     <th>150000</th>
-                    <th><form action="education.php" class="navbar-form navbar-right" role="search">
+                    <th><form method="post" action="education.php" class="navbar-form navbar-right" >
         <button type="submit" name="upgrade" class="btn btn-default btn-success" id="3">Click here to upgrade!</button>
       </form> </th>
                 </tr>
@@ -167,7 +171,7 @@ if(isset($_POST['submit']))
                     <th>Manager</th>
                     <th>MBA</th>
                     <th>450000</th>
-                    <th><form action="education.php" class="navbar-form navbar-right" role="search">
+                    <th><form method="post" action="education.php" class="navbar-form navbar-right" >
         <button type="submit" name="upgrade" class="btn btn-default btn-success" id="4">Click here to upgrade!</button>
       </form> </th>
                 </tr>
@@ -175,7 +179,7 @@ if(isset($_POST['submit']))
                     <th>CEO</th>
                     <th>Entrepreneurship</th>
                     <th>1350000</th>
-                    <th><form action="education.php" class="navbar-form navbar-right" role="search">
+                    <th><form method="post" action="education.php" class="navbar-form navbar-right">
         <button type="submit" name="upgrade" class="btn btn-default btn-success" id="5">Click here to upgrade!</button>
       </form> </th>
                 </tr>
