@@ -14,8 +14,9 @@
     $player2 = mysql_query($player1) or die ("could not select players");
     $player3 = mysql_fetch_array($player2);
     $playerName = $player3['name']; 
-
-    ?>
+    $playerEducation = $player3['profession'];
+    $playerMoney = $player3['tmoney'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,31 +45,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.php">Crash Cash</a>
+          <a class="navbar-brand" href="game.php">Crash Cash</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Personal Information <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Manage your income</a></li>
-                <li><a href="#">Rent</a></li>
-                <li><a href="#">Taxes</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
           <form action="logout.php" class="navbar-form navbar-right" role="search">
             <button type="submit" name="logout" class="btn btn-default">Logout</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-              <li><p class="navbar-text"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><?php echo $playerName; ?></p></li>
-            
+              <li><p class="navbar-text"><span class="navglyp glyphicon glyphicon-user" aria-hidden="true"></span><?php echo $playerName; ?></p></li>   
+              <li><p class="navbar-text"><i class="navglyp fa fa-suitcase"></i><?php echo $playerEducation; ?></p></li>
+              <li><p class="navbar-text"><i class="navglyp fa fa-money"></i><?php echo $playerMoney; ?></p></li>
           </ul>
         </div><!-- /.navbar-collapse -->
         
@@ -88,6 +76,12 @@
       </div><!-- /.container-fluid -->
     </nav><!-- End of Navbar -->
 
+
+    <div>
+      <form action="education.php" class="navbar-form navbar-right" role="search">
+        <button type="submit" name="upgrade" class="btn btn-default">Click here to upgrade!</button>
+      </form> 
+    </div>
     </body>
 
   
