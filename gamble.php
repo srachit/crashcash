@@ -87,6 +87,8 @@
                             </li>
                             <li><a href="education.php">Education</a>
                             </li>
+                            <li><a href="loan.php">Loan</a></li>
+
                         </ul>
                         <ul class="nav nav-sidebar">
                             <li class="active"><a href="#">Gambling <span class="sr-only">(current)</span></a>

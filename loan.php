@@ -69,7 +69,7 @@
                         <li><a href="game.php">Overview <span class="sr-only">(current)</span></a></li>
                         <li><a href="stockmarket.php">Stock Market</a></li>
                         <li><a href="education.php">Education</a></li>
-                        <li  class="active"><a href="loan.php">loan</a></li>
+                        <li  class="active"><a href="loan.php">Loan</a></li>
                     </ul>
                     <ul class="nav nav-sidebar">
                         <li><a href="gamble.php">Gambling</a></li>
