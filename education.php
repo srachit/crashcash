@@ -26,7 +26,7 @@ if ($playerIntelligence == 1){
         print   "Upgraded to Starbucks!";
     }
     else{
-    print "Not Enough Money to Upgrade"
+    echo "Not Enough Money to Upgrade";
     }
 } 
 

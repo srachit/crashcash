@@ -69,7 +69,7 @@
                         <li><a href="#">Education</a></li>
                     </ul>
                     <ul class="nav nav-sidebar">
-                        <li><a href="">Gambling</a></li>
+                        <li><a href="gamble.php">Gambling</a></li>
                     </ul>
                 </div>
             </div>
