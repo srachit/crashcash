@@ -132,8 +132,8 @@
 
                 <form method="post" class="form-signup" role="form" action="resetLoan.php">
                     <div class="form-group">
-                        <input type="number" class="form-control" name="loanAmount" id="loanAmount" placeholder="tpye amount">
-                        <button type="submit" name="loanAmount" class="btn btn-default btn-success">Pay Loan!</button>
+                        <input type="number" class="form-control" name="loanAmount" id="loanAmount" placeholder="type amount">
+                        <button type="submit" class="btn btn-default btn-success">Pay Loan!</button>
                     </div>
                 </form>
             </div>

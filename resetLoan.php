@@ -1,5 +1,5 @@
 <?php
-    include 'connect.php'
+    include 'connect.php';
     session_start();
     if(isset($_SESSION['player']))
     {
@@ -30,15 +30,16 @@
     }
     else if ( ($playerLoan - $loanPayback) == 0)
     {
-   // if ($playerIntelligence == 1 && $playerGotLoan == false){
-            $updateplayer = "Update players set loan=0, interest = 0, tmoney = tmoney - loanAmount, total_loan = 0, any_loan = false where name='$playerName'";
+            $random = $playerMoney - $loanPayback;
+            $updateplayer = "Update players set loan=0, interest = 0, tmoney = '$random', total_loan = 0, any_loan = false where name='$playerName'";
             mysql_query($updateplayer) or die("no Loan paid back!");
 
             print   "something print here";
-      //  }
     }
     else{
-         $updateplayer = "Update players tmoney = tmoney - loanAmount, total_loan = total_loan - loanAmount where name='$playerName'";
+        $random = $playerMoney - $loanPayback;
+        $random2 = $playerLoan - $loanPayback;
+         $updateplayer = "Update players set tmoney ='$random', total_loan ='$random2' where name='$playerName'";
         mysql_query($updateplayer) or die("no Loan paid back at all!");
 
         print   "something print here please";
