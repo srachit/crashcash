@@ -76,3 +76,11 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+#userStyle{
+    padding-top: 15px;
+    font-size: 15px;
+    position: relative;
+    display: block;
+    color: #777;
+}
