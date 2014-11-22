@@ -1,5 +1,5 @@
 <?php
-    $db = mysql_connect("217.199.187.189", "cl54-crashcash", "ucsdUSERS") or die("Could not connect to database");
+    $db = mysql_connect("localhost", "cl54-crashcash", "ucsdUSERS") or die("Could not connect to database");
     if(!$db)
     {
         die("no db");
