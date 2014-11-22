@@ -90,6 +90,7 @@
                         </ul>
                         <ul class="nav nav-sidebar">
                             <li class="active"><a href="#">Gambling <span class="sr-only">(current)</span></a>
+                            <li><a href="elearn.php">Learn And Earn!</a></li>
                             </li>
                         </ul>
                     </div>
@@ -109,17 +110,19 @@
 
         
         <div class="container">
-            <div id="succes" class="alert alert-success">You Won!</div>
-            <div id="fail" class="alert alert-danger">You Lose :(</div>                
+            <div id="succes" class="alert alert-success text-center">You Won!</div>
+            <div id="fail" class="alert alert-danger text-center">You Lose :(</div>        
+            <div id="Less" class="alert alert-danger text-center">Please Input a Number Less than 10</div>                
+
             <div class="gameDetails">
-                <form method="post" action="gambleScript.php" class="gambleForm" role="form">
+                <form method="get" action="gambleScript.php" class="gambleForm" role="form">
                     <div class="form-group">
                         <label for="numGuess">Guess a number between 1-10!</label>
                         <input type="number" min="1" max="10" class="form-control" name="numGuess" id="numGuess" placeholder="Enter Guess">
                     </div>
                     <div class="form-group">
                         <label for="gambleBet">Bet</label>
-                        <input type="number" class="form-control" name="gambleBet" id="gambleBet" placeholder="Enter Guess">
+                        <input type="number" min="1" class="form-control" name="gambleBet" id="gambleBet" placeholder="Enter Guess">
                     </div>
                     <button id="gambleButton" type="submit" class="btn btn-default">Submit</button>
                 </form>
