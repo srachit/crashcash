@@ -30,37 +30,40 @@ if ($playerIntelligence == 1){
     }
 } 
 
-else if ($playerTmoney >= 150000){
-     if ($playerIntelligence == 2){
+else if ($playerIntelligence == 2){ 
+    if ($playerTmoney >= 150000){ 
         $updateplayer = "update players set money=12000, intelligence=3, energy=20, profession='Professional', tmoney = tmoney -150000 where name='$playerName'";
         mysql_query($updateplayer) or die("Could not update Professional");
 
         print   "Upgraded to Professional!";
     }
-}else{
+    else{
     print "Not Enough Money to Upgrade";
+    }
 }
 
-else if ($playerTmoney >= 450000){
-     if ($playerIntelligence == 3){
+else if ($playerIntelligence == 3){
+    if ($playerTmoney >= 450000){
         $updateplayer = "update players set money=24000, intelligence=4, energy=30, profession='Manager', tmoney = tmoney -450000 where name='$playerName'";
         mysql_query($updateplayer) or die("Could not update Manager");
 
         print   "Upgraded to Manager!";
     }
-}else{
+    else{
     print   "Not Enough Money to Upgrade";
+    }
 }
 
-else if ($playerTmoney >= 1350000){
-     if ($playerIntelligence == 4){
+else if ($playerIntelligence == 4){
+    if ($playerTmoney >= 1350000){
         $updateplayer = "update players set money=48000, intelligence=5, energy=40, profession='CEO', tmoney = tmoney -1350000 where name='$playerName'";
         mysql_query($updateplayer) or die("Could not update CEO");
 
         print   "Upgraded to CEO!";
     }
-}else{
+    else{
     print   "Not Enough Money to Upgrade";
+    }
 }
 
 ?>
