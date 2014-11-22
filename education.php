@@ -123,7 +123,7 @@ if(isset($_POST['upgrade']))
                 <div class="col-sm-3 col-md-2 sidebar">
                     <ul class="nav nav-sidebar">
                         <li><a href="game.php">Overview <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">Stock Market</a></li>
+                        <li><a href="stockmarket.php">Stock Market</a></li>
                         <li class="active"><a href="#">Education</a></li>
                     </ul>
                     <ul class="nav nav-sidebar">

@@ -1,21 +1,25 @@
 <?php
-    include_once 'connect.php';
-    session_start();
-    if(isset($_SESSION['player']))
-    {
-        $player = $_SESSION['player'];
-    }
-    else
-    {
-        echo    "Not Logged in <br><br> <a href='index.php'>Go Back</a>";
-        exit;
-    }
-    $player1 = "SELECT * from players where name = '$player'";
-    $player2 = mysql_query($player1) or die ("could not select players");
-    $player3 = mysql_fetch_array($player2);
-    $playerName = $player3['name']; 
-    $playerEducation = $player3['profession'];
-    $playerMoney = $player3['tmoney'];
+include_once 'connect.php';
+session_start();
+if(isset($_SESSION['player']))
+{
+    $player = $_SESSION['player'];
+}
+else
+{
+    echo    "Not Logged in <br><br> <a href='index.php'>Go Back</a>";
+    exit;
+}
+
+$player1 = "SELECT * from players where name = '$player'";
+$player2 = mysql_query($player1) or die ("could not select players");
+$player3 = mysql_fetch_array($player2);
+$playerName = $player3['name'];
+$playerIntelligence = $player3['intelligence'];
+$playerTmoney = $player3['tmoney'];
+$playerStocks = $player3['stocks'];
+$playerProfession = $player3['profession'];
+
 ?>
 
 <!DOCTYPE html>
@@ -55,8 +59,8 @@
           </form>
           <ul class="nav navbar-nav navbar-right">
               <li><p class="navbar-text"><span class="navglyp glyphicon glyphicon-user" aria-hidden="true"></span><?php echo $playerName; ?></p></li>   
-              <li><p class="navbar-text"><i class="navglyp fa fa-suitcase"></i><?php echo $playerEducation; ?></p></li>
-              <li><p class="navbar-text"><i class="navglyp fa fa-money"></i><?php echo $playerMoney; ?></p></li>
+              <li><p class="navbar-text"><i class="navglyp fa fa-suitcase"></i><?php echo $playerProfession; ?></p></li>
+              <li><p class="navbar-text"><i class="navglyp fa fa-money"></i><?php echo $playerTmoney; ?></p></li>
           </ul>
         </div><!-- /.navbar-collapse -->
         
@@ -64,8 +68,8 @@
             <div class=row>
                 <div class="col-sm-3 col-md-2 sidebar">
                     <ul class="nav nav-sidebar">
-                        <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-                        <li><a href="stockmarket.php">Stock Market</a></li>
+                        <li><a href="game.php">Overview <span class="sr-only">(current)</span></a></li>
+                        <li class="active"><a href="#">Stock Market</a></li>
                         <li><a href="education.php">Education</a></li>
                     </ul>
                     <ul class="nav nav-sidebar">
@@ -76,15 +80,19 @@
       </div><!-- /.container-fluid -->
     </nav><!-- End of Navbar -->
 
+    <div class="container">
+        <div class="row"> <!-- User's Own Stocks -->
+        </div>
+
+        <div class="row"> <!-- All Stocks -->
+        </div>
+    </div>
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="JS/bootstrap.min.js"></script>
+
     </body>
 </html>
-
-  
-
-
 
