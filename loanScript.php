@@ -17,32 +17,33 @@
 	$playerIntelligence = $player3['intelligence'];
 	$playerTmoney = $player3['tmoney'];
     $playerLoan = $player3['tloan'];
+    $playerGotLoan = $player3['any_loan'];
 
     if(isset($_POST['upgrade']))
     {
-        if ($playerIntelligence == 1){
-                $updateplayer = "update players set loan=20000, interest = 20, tmoney = tmoney + loan, tloan = tloan + loan + 4000, time=15 where name='$playerName'";
+        if ($playerIntelligence == 1 && $playerGotLoan == false ){
+                $updateplayer = "update players set loan=20000, interest = 20, tmoney = tmoney + loan, tloan = tloan + loan + 4000, time=15, any_loan = true where name='$playerName'";
                 mysql_query($updateplayer) or die("no Loan given");
 
                 print   "Upgraded to Starbucks!";
             }
 
-        else if ($playerIntelligence == 2){ 
-                $updateplayer = "update players set loan=50000, interest = 30, tmoney = tmoney + loan, tloan = tloan + loan + 15000, time=18 where name='$playerName'";
+        else if ($playerIntelligence == 2 && $playerGotLoan == false){ 
+                $updateplayer = "update players set loan=50000, interest = 30, tmoney = tmoney + loan, tloan = tloan + loan + 15000, time=18, any_loan = true where name='$playerName'";
                 mysql_query($updateplayer) or die("no Loan given");
 
                 print   "Upgraded to Professional!";
             }
 
-        else if ($playerIntelligence == 3){
-                $updateplayer = "update players set loan=120000, interest = 40, tmoney = tmoney + loan, tloan = tloan + loan + 48000, time=21 where name='$playerName'";
+        else if ($playerIntelligence == 3 && $playerGotLoan == false){
+                $updateplayer = "update players set loan=120000, interest = 40, tmoney = tmoney + loan, tloan = tloan + loan + 48000, time=21, any_loan = true where name='$playerName'";
                 mysql_query($updateplayer) or die("no Loan given");
 
                 print   "Upgraded to Manager!";
             }
 
-        else if ($playerIntelligence == 4){
-                $updateplayer = "update players set loan=400000, interest = 50, tmoney = tmoney + loan, tloan = tloan + loan + 200000, time=33 where name='$playerName'";
+        else if ($playerIntelligence == 4 && $playerGotLoan == false ){
+                $updateplayer = "update players set loan=400000, interest = 50, tmoney = tmoney + loan, tloan = tloan + loan + 200000, time=33, any_loan = true where name='$playerName'";
                 mysql_query($updateplayer) or die("no Loan given");
 
                 print   "Upgraded to CEO!";
