@@ -16,6 +16,8 @@
     $playerName = $player3['name']; 
     $playerEducation = $player3['profession'];
     $playerMoney = $player3['tmoney'];
+    $playerIntelligence = $player3['intelligence'];
+    $playerEnergy = $player3['tenergy'];
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +33,7 @@
     <link href="CSS/bootstrap.min.css" rel="stylesheet">
     <link href="CSS/font-awesome.min.css" rel="stylesheet">
     <link href="CSS/style.css" rel="stylesheet">
+    <link href="CSS/game.css" rel="stylesheet">
 </head>
 
 <body>
@@ -75,10 +78,34 @@
                     </ul>
                 </div>
             </div>
-      </div><!-- /.container-fluid -->
+          </div><!-- /.container-fluid -->
+        </div>
     </nav><!-- End of Navbar -->
 
-    
+    <div class="container">
+        <div class="row">
+            <div class="box col-md-3">
+                <h3 class="text-center">Your Information</h1>
+                <p>Player Name: <?php echo $playerName;?></p>
+            </div>
+
+            <div class="box col-md-3">
+                <h3 class="text-center">Your Statistics</h3>
+                <p>Player Education: <?php echo $playerEducation; ?></p>
+                <p>Player Total Money: <?php echo $playerMoney; ?></p>
+                <p>Player Intelligence: <?php echo $playerIntelligence; ?></p>
+                <p>Player Energy: <?php echo $playerEnergy; ?></p>
+            </div>
+
+        </div>
+        
+        <div class="row">
+            <div class="box2 col-md-3">
+                <h3 class="text-center">Loan Information</h3>
+            </div>
+        </div> 
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->

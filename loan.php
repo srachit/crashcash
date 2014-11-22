@@ -15,8 +15,8 @@
 	$player3 = mysql_fetch_array($player2);
 	$playerName = $player3['name'];
 	$playerIntelligence = $player3['intelligence'];
-	$playerTmoney = $player3['tmoney'];
-    $playerProfession = $player3['profession'];
+	$playerMoney = $player3['tmoney'];
+    $playerEducation = $player3['profession'];
     $playerLoan = $player3['tloan'];
 ?>
 
@@ -79,7 +79,7 @@
       </div><!-- /.container-fluid -->
     </nav><!-- End of Navbar -->
 
-    <div class="section">
+    <div class="container">
 
         <div class="panel panel-default">
           <!-- Default panel contents -->
