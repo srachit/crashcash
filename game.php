@@ -15,7 +15,6 @@
     $player3 = mysql_fetch_array($player2);
     $playerName = "You are logged in as " . $player3['name']; 
 
-    //echo "You are logged in as " .$player3['name'];
     ?>
 
 <!DOCTYPE html>
@@ -69,7 +68,7 @@
             <button type="submit" name="logout" class="btn btn-default">Logout</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><p><?php echo $playerName; ?></p></li>
+            <li><p id="userStyle"><?php echo $playerName; ?></p></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
