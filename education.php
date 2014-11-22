@@ -194,13 +194,13 @@ if(isset($_POST['submit']))
     <script type="text/javascript">
         var php_var = "<?php echo json_encode($playerIntelligence); ?>";
 
-        if (php_var == 2){
+        if (php_var == 2 || php_var == 3 || php_var == 4 || php_var == 5){
             document.getElementById("2").disabled = true;
         }
-        if (php_var == 3){
+        if (php_var == 3 || php_var == 4 || php_var == 5){
             document.getElementById("3").disabled = true;
         }
-        if (php_var == 4){
+        if (php_var == 4 || php_var == 5){
             document.getElementById("4").disabled = true;
         }
         if (php_var == 5){
