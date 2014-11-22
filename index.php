@@ -52,9 +52,9 @@
                 <input type="text" class="form-control" placeholder="Username">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Password">
+                <input type="text" name="password" class="form-control" placeholder="Password">
               </div>
-              <button type="submit" class="btn btn-default">Sign In</button>
+              <button type="submit" name="submit" class="btn btn-default">Sign In</button>
             </form>
           
         </div><!-- /.navbar-collapse -->

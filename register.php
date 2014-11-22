@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -65,47 +67,29 @@
         <!-- /.container-fluid -->
     </nav>
     <!-- End of Navbar -->
-    <div class="row">
-        <div class="col-md-6">
-            <form class="form-signup" role="form">
-                <div class="form-group">
-                    <label for="username">User Name</label>
-                    <input type="text" class="form-control" id="username" placeholder="Your User Name">
-                </div>
-                <div class="form-group">
-                    <label for="email1">Email address</label>
-                    <input type="email" class="form-control" id="email1" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="email2">Repeat Your Email Address</label>
-                    <input type="email" class="form-control" id="email2" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                    <label for="password1">Password</label>
-                    <input type="password" class="form-control" id="password1" placeholder="Password">
-                </div>
-                <div class="form-group">
-                    <label for="password2">Repeat Your Password</label>
-                    <input type="password" class="form-control" id="password2" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
 
-        <div class="col-md-6">
-            <form class="form-signin" role="form">
-                <div class="form-group">
-                    <label for="username">User Name</label>
-                    <input type="text" class="form-control" id="username" placeholder="Your User Name">
-                </div>
-                <div class="form-group">
-                    <label for="password1">Password</label>
-                    <input type="password" class="form-control" id="password1" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </div>
+    <div class="container">
+        <form method="post" class="form-signup" role="form">
+            <div class="form-group">
+                <label for="username">User Name</label>
+                <input type="text" class="form-control" name="username" id="username" placeholder="Your User Name">
+            </div>
+            <div class="form-group">
+                <label for="email1">Email address</label>
+                <input type="email" name="email" class="form-control" name="email" id="email1" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="password1">Password</label>
+                <input type="password" class="form-control" name="password1" id="password1" placeholder="Password">
+            </div>
+             <div class="form-group">
+                <label for="password2">Repeat Your Password</label>
+                <input type="password" class="form-control" name="password2" id="password2" placeholder="Password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
+
 
 
 
