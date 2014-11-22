@@ -59,7 +59,7 @@
             <button type="submit" class="btn btn-default">Logout</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="register.php"><input type="hidden" name="type" value="<?php echo $playerName; ?>" ></a></li>
+            <li><p><?php echo $playerName; ?></p></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->

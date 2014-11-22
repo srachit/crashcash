@@ -69,7 +69,7 @@
     <!-- End of Navbar -->
 
     <div class="container">
-        <form method="post" class="form-signup" role="form">
+        <form method="post" class="form-signup" role="form" action="reguser.php">
             <div class="form-group">
                 <label for="username">User Name</label>
                 <input type="text" class="form-control" name="username" id="username" placeholder="Your User Name">
