@@ -83,7 +83,7 @@
                         <ul class="nav nav-sidebar">
                             <li><a href="game.php">Overview</a>
                             </li>
-                            <li><a href="#">Stock Market</a>
+                            <li><a href="stockmarket.php">Stock Market</a>
                             </li>
                             <li><a href="education.php">Education</a>
                             </li>
