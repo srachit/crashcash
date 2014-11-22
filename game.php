@@ -66,7 +66,7 @@
                     <ul class="nav nav-sidebar">
                         <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
                         <li><a href="#">Stock Market</a></li>
-                        <li><a href="#">Education</a></li>
+                        <li><a href="education.php">Education</a></li>
                     </ul>
                     <ul class="nav nav-sidebar">
                         <li><a href="">Gambling</a></li>

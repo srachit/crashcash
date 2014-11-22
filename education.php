@@ -26,7 +26,7 @@ if ($playerIntelligence == 1){
         print   "Upgraded to Starbucks!";
     }
     else{
-    print "Not Enough Money to Upgrade"
+    print "Not Enough Money to Upgrade";
     }
 } 
 
@@ -38,7 +38,7 @@ else if ($playerTmoney >= 150000){
         print   "Upgraded to Professional!";
     }
 }else{
-    print "Not Enough Money to Upgrade"
+    print "Not Enough Money to Upgrade";
 }
 
 else if ($playerTmoney >= 450000){
@@ -49,7 +49,7 @@ else if ($playerTmoney >= 450000){
         print   "Upgraded to Manager!";
     }
 }else{
-    print   "Not Enough Money to Upgrade"
+    print   "Not Enough Money to Upgrade";
 }
 
 else if ($playerTmoney >= 1350000){
@@ -60,7 +60,7 @@ else if ($playerTmoney >= 1350000){
         print   "Upgraded to CEO!";
     }
 }else{
-    print   "Not Enough Money to Upgrade"
+    print   "Not Enough Money to Upgrade";
 }
 
 ?>
@@ -111,9 +111,9 @@ else if ($playerTmoney >= 1350000){
             <div class=row>
                 <div class="col-sm-3 col-md-2 sidebar">
                     <ul class="nav nav-sidebar">
-                        <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Overview <span class="sr-only">(current)</span></a></li>
                         <li><a href="#">Stock Market</a></li>
-                        <li><a href="#">Education</a></li>
+                        <li class="active"><a href="#">Education</a></li>
                     </ul>
                     <ul class="nav nav-sidebar">
                         <li><a href="">Gambling</a></li>
@@ -123,11 +123,64 @@ else if ($playerTmoney >= 1350000){
       </div><!-- /.container-fluid -->
     </nav><!-- End of Navbar -->
 
-    <div>
+    <div class="section">
       <form action="education.php" class="navbar-form navbar-right" role="search">
         <button type="submit" name="upgrade" class="btn btn-default">Click here to upgrade!</button>
       </form> 
+
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Panel heading</div>
+
+          <!-- Table -->
+          <table class="table">
+            <thead>
+                <tr>
+                    <th>Upgrade To</th>
+                    <th>Course Name</th>
+                    <th>Course Cost($)</th>
+                    <th>Upgrade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Starbucks</th>
+                    <th>Customer Service Training</th>
+                    <th>50000</th>
+                    <th><form action="education.php" class="navbar-form navbar-right" role="search">
+        <button type="submit" name="upgrade" class="btn btn-default btn-success">Click here to upgrade!</button>
+      </form> </th>
+                </tr>
+                <tr>
+                    <th>Professional</th>
+                    <th>Bachelors Degree</th>
+                    <th>150000</th>
+                    <th><form action="education.php" class="navbar-form navbar-right" role="search">
+        <button type="submit" name="upgrade" class="btn btn-default btn-success">Click here to upgrade!</button>
+      </form> </th>
+                </tr>
+                <tr>
+                    <th>Manager</th>
+                    <th>MBA</th>
+                    <th>450000</th>
+                    <th><form action="education.php" class="navbar-form navbar-right" role="search">
+        <button type="submit" name="upgrade" class="btn btn-default btn-success">Click here to upgrade!</button>
+      </form> </th>
+                </tr>
+                <tr>
+                    <th>CEO</th>
+                    <th>Entrepreneurship</th>
+                    <th>1350000</th>
+                    <th><form action="education.php" class="navbar-form navbar-right" role="search">
+        <button type="submit" name="upgrade" class="btn btn-default btn-success">Click here to upgrade!</button>
+      </form> </th>
+                </tr>
+            </tbody>
+          </table>
+        </div>
     </div>
+
+
     
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
