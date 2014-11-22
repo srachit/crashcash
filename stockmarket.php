@@ -11,6 +11,9 @@ else
     exit;
 }
 
+
+include 'stockmarketscript.php';
+
 $player1 = "SELECT * from players where name = '$player'";
 $player2 = mysql_query($player1) or die ("could not select players");
 $player3 = mysql_fetch_array($player2);
@@ -19,6 +22,10 @@ $playerIntelligence = $player3['intelligence'];
 $playerTmoney = $player3['tmoney'];
 $playerStocks = $player3['stocks'];
 $playerProfession = $player3['profession'];
+
+$stockGrabber = new StockMarketGrabber();
+$userStockData = $stockGrabber->grabSpecific(explode(",", $playerStocks));
+
 
 ?>
 
@@ -81,10 +88,42 @@ $playerProfession = $player3['profession'];
     </nav><!-- End of Navbar -->
 
     <div class="container">
-        <div class="row"> <!-- User's Own Stocks -->
-        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading"><h4><?php echo $playerName . "'s Stocks" ?></h4></div>
 
-        <div class="row"> <!-- All Stocks -->
+            <table class="table">
+                <tbody>
+                <?php
+                    for ($i = 0; $i < count($userStockData); $i ++)
+                    {
+                        $chevron_direction = "up";
+                        $chevron_color = "green";
+                        echo "<tr>";
+                        echo "<th>" . $userStockData[$i]["full_name"] . "</th>";
+                        echo "<th>" . $userStockData[$i]["symbol"] . "</th>";
+                        if (floatval($userStockData[$i]["up_down_amount"]) > 0)
+                        {
+                            $chevron_direction = "up";
+                            $chevron_color = "green";
+                        }
+                        else
+                        {
+                            $chevron_direction = "down";
+                            $chevron_color = "red";
+                        }
+                        echo "<th><span class=\"glyphicon
+                        glyphicon-chevron-$chevron_direction\" style=\"color:
+                        $chevron_color;\"></span>" .
+                        $userStockData[$i]["up_down_amount"] . "</th>";
+
+                        echo "<th><span class=\"glyphicon
+                        glyphicon-usd\"></span>" . $userStockData[$i]["price"] .
+                        "</th>";
+                        echo "</tr>";
+                    }
+                ?>
+                </tbody>
+            </table>
         </div>
     </div>
     
