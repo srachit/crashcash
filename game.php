@@ -14,6 +14,7 @@
     $player2 = mysql_query($player1) or die ("could not select players");
     $player3 = mysql_fetch_array($player2);
     $playerName = "You are logged in as " . $player3['name']; 
+    $playerEducation = "Profession: " .$player3['profession']
 
     ?>
 
@@ -69,11 +70,18 @@
           </form>
           <ul class="nav navbar-nav navbar-right">
             <li><p id="userStyle"><?php echo $playerName; ?></p></li>
+            <li><p id="userStyle"><?php echo $playerEducation; ?></p></li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav><!-- End of Navbar -->
 
+
+    <div>
+      <form action="education.php" class="navbar-form navbar-right" role="search">
+        <button type="submit" name="upgrade" class="btn btn-default">Click here to upgrade!</button>
+      </form> 
+    </div>
     </body>
 
   
