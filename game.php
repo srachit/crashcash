@@ -71,6 +71,7 @@
                         <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
                         <li><a href="stockmarket.php">Stock Market</a></li>
                         <li><a href="education.php">Education</a></li>
+                        <li><a href="loan.php">loan</a></li>
                     </ul>
                     <ul class="nav nav-sidebar">
                         <li><a href="gamble.php">Gambling</a></li>
