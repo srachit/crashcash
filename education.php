@@ -10,6 +10,7 @@ else
     echo    "Not Logged in <br><br> <a href='index.php'>Go Back</a>";
     exit;
 }
+
 $player1 = "SELECT * from players where name = '$player'";
 $player2 = mysql_query($player1) or die ("could not select players");
 $player3 = mysql_fetch_array($player2);
@@ -18,53 +19,56 @@ $playerName = $player3['name'];
 $playerTmoney = $player3['tmoney'];
 $playerProfession = $player3['profession'];
 
-if ($playerIntelligence == 1){
-    if ($playerTmoney >= 50000){
-        $updateplayer = "update players set money=6000, intelligence=2, energy=10, profession='Starbucks', tmoney = tmoney -50000 where name='$playerName'";
-        mysql_query($updateplayer) or die("Could not update starbucks");
+if(isset($_POST['submit']))
+    {
+        if ($playerIntelligence == 1){
+            if ($playerTmoney >= 50000){
+                $updateplayer = "update players set money=6000, intelligence=2, energy=10, profession='Starbucks', tmoney = tmoney -50000 where name='$playerName'";
+                mysql_query($updateplayer) or die("Could not update starbucks");
 
-        print   "Upgraded to Starbucks!";
-    }
-    else{
-        print "Not Enough Money to sax";
-    }
-} 
+                print   "Upgraded to Starbucks!";
+            }
+            else{
+            print "Not Enough Money to Upgrade";
+            }
+        } 
 
-else if ($playerIntelligence == 2){ 
-    if ($playerTmoney >= 150000){ 
-        $updateplayer = "update players set money=12000, intelligence=3, energy=20, profession='Professional', tmoney = tmoney -150000 where name='$playerName'";
-        mysql_query($updateplayer) or die("Could not update Professional");
+        else if ($playerIntelligence == 2){ 
+            if ($playerTmoney >= 150000){ 
+                $updateplayer = "update players set money=12000, intelligence=3, energy=20, profession='Professional', tmoney = tmoney -150000 where name='$playerName'";
+                mysql_query($updateplayer) or die("Could not update Professional");
 
-        print   "Upgraded to Professional!";
-    }
-    else{
-    print "Not Enough Money to sex";
-    }
-}
+                print   "Upgraded to Professional!";
+            }
+            else{
+            print "Not Enough Money to Upgrade";
+            }
+        }
 
-else if ($playerIntelligence == 3){
-    if ($playerTmoney >= 450000){
-        $updateplayer = "update players set money=24000, intelligence=4, energy=30, profession='Manager', tmoney = tmoney -450000 where name='$playerName'";
-        mysql_query($updateplayer) or die("Could not update Manager");
+        else if ($playerIntelligence == 3){
+            if ($playerTmoney >= 450000){
+                $updateplayer = "update players set money=24000, intelligence=4, energy=30, profession='Manager', tmoney = tmoney -450000 where name='$playerName'";
+                mysql_query($updateplayer) or die("Could not update Manager");
 
-        print   "Upgraded to Manager!";
-    }
-    else{
-    print   "Not Enough Money to sax";
-    }
-}
+                print   "Upgraded to Manager!";
+            }
+            else{
+            print   "Not Enough Money to Upgrade";
+            }
+        }
 
-else if ($playerIntelligence == 4){
-    if ($playerTmoney >= 1350000){
-        $updateplayer = "update players set money=48000, intelligence=5, energy=40, profession='CEO', tmoney = tmoney -1350000 where name='$playerName'";
-        mysql_query($updateplayer) or die("Could not update CEO");
+        else if ($playerIntelligence == 4){
+            if ($playerTmoney >= 1350000){
+                $updateplayer = "update players set money=48000, intelligence=5, energy=40, profession='CEO', tmoney = tmoney -1350000 where name='$playerName'";
+                mysql_query($updateplayer) or die("Could not update CEO");
 
-        print   "Upgraded to CEO!";
+                print   "Upgraded to CEO!";
+            }
+            else{
+            print   "Not Enough Money to Upgrade";
+            }
+        }
     }
-    else{
-    print   "Not Enough Money to Upgrade";
-    }
-}
 
 ?>
 
@@ -148,7 +152,7 @@ else if ($playerIntelligence == 4){
                     <th>Customer Service Training</th>
                     <th>50000</th>
                     <th><form action="education.php" class="navbar-form navbar-right" role="search">
-        <button type="submit" name="upgrade" class="btn btn-default btn-success">Click here to upgrade!</button>
+        <button type="submit" name="upgrade" class="btn btn-default btn-success" id="2">Click here to upgrade!</button>
       </form> </th>
                 </tr>
                 <tr>
@@ -156,7 +160,7 @@ else if ($playerIntelligence == 4){
                     <th>Bachelors Degree</th>
                     <th>150000</th>
                     <th><form action="education.php" class="navbar-form navbar-right" role="search">
-        <button type="submit" name="upgrade" class="btn btn-default btn-success">Click here to upgrade!</button>
+        <button type="submit" name="upgrade" class="btn btn-default btn-success" id="3">Click here to upgrade!</button>
       </form> </th>
                 </tr>
                 <tr>
@@ -164,7 +168,7 @@ else if ($playerIntelligence == 4){
                     <th>MBA</th>
                     <th>450000</th>
                     <th><form action="education.php" class="navbar-form navbar-right" role="search">
-        <button type="submit" name="upgrade" class="btn btn-default btn-success">Click here to upgrade!</button>
+        <button type="submit" name="upgrade" class="btn btn-default btn-success" id="4">Click here to upgrade!</button>
       </form> </th>
                 </tr>
                 <tr>
@@ -172,7 +176,7 @@ else if ($playerIntelligence == 4){
                     <th>Entrepreneurship</th>
                     <th>1350000</th>
                     <th><form action="education.php" class="navbar-form navbar-right" role="search">
-        <button type="submit" name="upgrade" class="btn btn-default btn-success">Click here to upgrade!</button>
+        <button type="submit" name="upgrade" class="btn btn-default btn-success" id="5">Click here to upgrade!</button>
       </form> </th>
                 </tr>
             </tbody>
@@ -186,6 +190,23 @@ else if ($playerIntelligence == 4){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="JS/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        var php_var = "<?php echo json_encode($playerIntelligence); ?>";
+
+        if (php_var == 2){
+            document.getElementById("2").disabled = true;
+        }
+        if (php_var == 3){
+            document.getElementById("3").disabled = true;
+        }
+        if (php_var == 4){
+            document.getElementById("4").disabled = true;
+        }
+        if (php_var == 5){
+            document.getElementById("5").disabled = true;
+        }
+    </script>
     </body>
 </html>
 

@@ -115,7 +115,11 @@
                 <form class="gambleForm" role="form">
                     <div class="form-group">
                         <label for="numGuess">Guess a number between 1-10!</label>
-                        <input type="number" class="form-control" id="numGuess" placeholder="Enter Guess">
+                        <input type="number" min="1" max="10" class="form-control" name="numGuess" id="numGuess" placeholder="Enter Guess">
+                    </div>
+                    <div class="form-group">
+                        <label for="gambleBet">Bet</label>
+                        <input type="number" class="form-control" name="gambleBet" id="gambleBet" placeholder="Enter Guess">
                     </div>
                     <button type="submit" class="btn btn-default">Submit</button>
                 </form>
