@@ -65,8 +65,8 @@
               </ul>
             </li>
           </ul>
-          <form class="navbar-form navbar-right" role="search">
-            <button type="submit" class="btn btn-default">Logout</button>
+          <form action="logout.php" class="navbar-form navbar-right" role="search">
+            <button type="submit" name="logout" class="btn btn-default">Logout</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
             <li><p><?php echo $playerName; ?></p></li>
