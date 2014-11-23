@@ -22,7 +22,7 @@ $playerTime = $player3['time'];
 $playerTLoan = $player3['total_loan'];
 $playerTLoan2 = $player3['loan'];
 
-$playerFD = $player3['fixed_deposit'];
+$playerFd = $player3['fixed_deposit'];
 $addFd = $_POST['fdAmount'];
 
 
@@ -41,7 +41,7 @@ $addFd = $_POST['fdAmount'];
     }
 
     if(isset($_POST['upgrade'])){
-        $updateplayer = "Update players set fixed_deposit= 0 ,tmoney = tmoney + fixed_deposit where name='$playerName'";
+        $updateplayer = "Update players set tmoney = tmoney + fixed_deposit, fixed_deposit= 0 where name='$playerName'";
         mysql_query($updateplayer) or die("no checkout");
 
         print   "You've checkout the deposit";

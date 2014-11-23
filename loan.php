@@ -147,11 +147,6 @@
         </div>
     </div>
 
-    <div class="container-fluid">
-        <div class="panel-body">
-            <p>Your Fixed Deposits: <?php echo $playerFD; ?> </p>
-            </div>
-        </div>
 
         <div class="container">
         <div class="panel panel-default">
@@ -161,10 +156,16 @@
                         <button type="submit" name = "addToFd"class="btn btn-default btn-success">Add to Fixed Deposit</button>
                     </div>
                 </form>
+            <div class="panel-body">
+                <p>Your Fixed Deposits: <?php echo $playerFD; ?> </p>
+            </div>
 
                   <form method="post" action="bank.php" class="navbar-form navbar-right" >
                     <button type="submit" name="upgrade" class="btn btn-default btn-success">Checkout!</button>
                 </form>
+            </div>
+            <div class="panel-body">
+            <p>Your Fixed Deposits: <?php echo $playerFD; ?> </p>
             </div>
             </div>
     </div>
