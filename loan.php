@@ -154,6 +154,7 @@
             </div>
         </div>
 
+        <div class="container-fluid">
         <div class="panel panel-default">
                 <form method="post" class="form-signup" role="form" action="bank.php">
                     <div class="form-group">
@@ -165,6 +166,7 @@
                   <form method="post" action="bank.php" class="navbar-form navbar-right" >
                     <button type="submit" name="upgrade" class="btn btn-default btn-success">Checkout!</button>
                 </form>
+            </div>
             </div>
     </div>
 
