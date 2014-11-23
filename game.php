@@ -21,8 +21,6 @@
     $playerTime = $player3['time'];
     $playerTLoan = $player3['total_loan'];
     $playerTLoan2 = $player3['loan'];
-
-
 ?>
 
 <!DOCTYPE html>

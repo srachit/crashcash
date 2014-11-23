@@ -19,6 +19,7 @@
     $playerEducation = $player3['profession'];
     $playerLoan = $player3['total_loan'];
     $playerTime = $player3['time'];
+    $playerFD = $player3['fixed_deposit'];
 ?>
 
 <!DOCTYPE html>
@@ -145,6 +146,26 @@
 			<p>Your loans: <?php echo $playerLoan; ?> Time remaining: <?php echo $playerTime; ?></p>
 			</div>
         </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="panel-body">
+            <p>Your Fixed Deposits: <?php echo $playerFD; ?> </p>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+                <form method="post" class="form-signup" role="form" action="bank.php">
+                    <div class="form-group">
+                        <input type="number" class="form-control" name="fdAmount" id="fdAmount" placeholder="type amount">
+                        <button type="submit" name = "addToFd"class="btn btn-default btn-success">Add to Fixed Deposit</button>
+                    </div>
+                </form>
+
+                  <form method="post" action="bank.php" class="navbar-form navbar-right" >
+                    <button type="submit" name="upgrade" class="btn btn-default btn-success">Checkout!</button>
+                </form>
+            </div>
     </div>
 
     

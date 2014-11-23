@@ -22,6 +22,7 @@
     //Amount paying back
     $loanPayback = $_POST['loanAmount'];
 
+if ($loanPayback > $playerMoney){
     if($loanPayback <= 0)
     {
         echo "You didn't pay anything back!";
@@ -44,5 +45,10 @@
 
         header("Location: game.php");
     }
+} ele{
+    echo "You don't have enough money!"
+    echo "<a href='loan.php'>Go back</a><br>";
+    exit;
+}
 
 ?>
