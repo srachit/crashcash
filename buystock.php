@@ -64,6 +64,7 @@ if (isset($_POST['stockNameInput']))
 
     mysql_query($updatequery) or die ("Could not update symbols");
     echo "Stock " . $targetsymbol . " bought for " . $targetprice;
+    header("refresh:1; url=stockmarket.php");
 }
 
 

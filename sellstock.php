@@ -44,6 +44,7 @@ if (isset($_POST['symbol']) && isset($_POST['price']))
     mysql_query($updatequery) or die ("Could not update symbols");
 
     echo "Stock " . $targetsymbol . " sold for " . $targetprice . "!<br>";
+    header("refresh:1; url=stockmarket.php");
 }
 
 ?>
