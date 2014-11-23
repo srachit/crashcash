@@ -13,31 +13,36 @@
         {
             $rent = 150;
             $food = 150;
-            $moneyLeft = $playerInfo3['tmoney'] - $rent - $food;
+            $tax = 150;
+            $moneyLeft = $playerInfo3['tmoney'] - $rent - $food - $tax;
         }
         else if($playerIntelligence==2)
         {
             $rent = 400;
             $food = 400;
-            $moneyLeft = $playerInfo3['tmoney'] - $rent - $food;
+            $tax = 400;
+            $moneyLeft = $playerInfo3['tmoney'] - $rent - $food - $tax;
         }
         else if($playerIntelligence==3)
         {
             $rent = 1000;
             $food = 1000;
-            $moneyLeft = $playerInfo3['tmoney'] - $rent - $food;
+            $tax = 1000;
+            $moneyLeft = $playerInfo3['tmoney'] - $rent - $food - $tax;
         }
         else if($playerIntelligence==4)
         {
             $rent = 3000;
             $food = 3000;
-            $moneyLeft = $playerInfo3['tmoney'] - $rent - $food;
+            $tax = 3000;
+            $moneyLeft = $playerInfo3['tmoney'] - $rent - $food - $tax;
         }
         else if($playerIntelligence==5)
         {
             $rent = 8000;
             $food = 8000;
-            $moneyLeft = $playerInfo3['tmoney'] - $rent - $food;
+            $tax = 8000;
+            $moneyLeft = $playerInfo3['tmoney'] - $rent - $food - $tax;
         }
 
         $updatePlayers = "Update players set tmoney='$moneyLeft' WHERE id = '$playerInfo3[id]'";
