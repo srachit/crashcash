@@ -26,7 +26,7 @@
                 mysql_query($updateplayer) or die("no Loan given");
 
                 print   "You've got a 20000 loan";
-                header("refresh:1; url=game.php");
+                header("refresh:1; url=loan.php");
         }
 
         else if ($playerIntelligence == 2 && $playerGotLoan == false){
@@ -34,7 +34,7 @@
                 mysql_query($updateplayer) or die("no Loan given");
 
                 print   "You've got a 50000 loan";
-                header("refresh:1; url=game.php");
+                header("refresh:1; url=loan.php");
 
         }
 
@@ -43,7 +43,7 @@
                 mysql_query($updateplayer) or die("no Loan given");
 
                 print   "You've got a 120000 loan";
-                header("refresh:1; url=game.php");
+                header("refresh:1; url=loan.php");
         }
 
         else if ($playerIntelligence == 4 && $playerGotLoan == false){
@@ -51,7 +51,7 @@
                 mysql_query($updateplayer) or die("no Loan given");
 
                 print   "You've got a 400000 loan";
-                header("refresh:1; url=game.php");
+                header("refresh:1; url=loan.php");
         }
     }
 
