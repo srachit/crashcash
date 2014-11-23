@@ -47,6 +47,19 @@ class StockMarketGrabber
 
         return $returndata;
     }
+
+    function updateEntriesBySymbol($entries)
+    {
+        foreach ($entries as &$entry)
+        {
+            $querystr = "UPDATE stocks
+                         SET up_down_amount=" . $entry["up_down_amount"] . ",
+                         price=" . $entry["price"] . " WHERE symbol=" .
+                         $entry["symbol"];
+            
+            $this->connector->submitQuery($querystr);
+        }
+    }
 }
 
 class StockMarketRanker

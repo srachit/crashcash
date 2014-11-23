@@ -97,6 +97,7 @@ $userStockData = $stockGrabber->grabSpecific(explode(",", $playerStocks));
                 <?php
                     for ($i = 0; $i < count($userStockData); $i ++)
                     {
+                        echo "<form action=\"sellstock.php\" method=\"post\">";
                         $chevron_direction = "up";
                         $chevron_color = "green";
                         echo "<tr>";
@@ -120,9 +121,75 @@ $userStockData = $stockGrabber->grabSpecific(explode(",", $playerStocks));
                         echo "<th><span class=\"glyphicon
                         glyphicon-usd\"></span>" . $userStockData[$i]["price"] .
                         "</th>";
+
+                        echo "<input type=\"hidden\" name=\"symbol\" value=\"" .
+                        $userStockData[$i]["symbol"] . "\" />";
+                        echo "<input type=\"hidden\" name=\"price\" value=\"" .
+                        $userStockData[$i]["price"] . "\" />";
+                        echo "<th><button type=\"submit\">Sell</button></th>";
                         echo "</tr>";
+                        echo "</form>";
                     }
                 ?>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading"><h4>Acquire Stocks</h4></div>
+
+            <form class="form-inline" method="post" role="form" action="buystock.php">
+                <div class="form-group">
+                    <div class="input-group">
+                        <label class="sr-only" for="stockNameInput">Stock
+                        Symbol</label>
+                        <input type="text" class="form-control"
+                        id="stockNameInput" name="stockNameInput" placeholder="Stock Symbol (MSFT,
+                        GOOG, etc.)">
+                        <button type="submit" class="btn
+                        btn-default">Buy!</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading"><h4>Global Stocks</h4></div>
+
+            <table class="table">
+                <tbody>
+                    <?php
+                        $globaldata = $stockGrabber->grabTop(200);
+                        
+                        for ($i = 0; $i < count($globaldata); $i++)
+                        {
+                         $chevron_direction = "up";
+                        $chevron_color = "green";
+                        echo "<tr>";
+                        echo "<th>" . $globaldata[$i]["full_name"] . "</th>";
+                        echo "<th>" . $globaldata[$i]["symbol"] . "</th>";
+                        if (floatval($globaldata[$i]["up_down_amount"]) > 0)
+                        {
+                            $chevron_direction = "up";
+                            $chevron_color = "green";
+                        }
+                        else
+                        {
+                            $chevron_direction = "down";
+                            $chevron_color = "red";
+                        }
+                        echo "<th><span class=\"glyphicon
+                        glyphicon-chevron-$chevron_direction\" style=\"color:
+                        $chevron_color;\"></span>" .
+                        $globaldata[$i]["up_down_amount"] . "</th>";
+
+                        echo "<th><span class=\"glyphicon
+                        glyphicon-usd\"></span>" . $globaldata[$i]["price"] .
+                        "</th>";
+                        echo "</tr>";
+                           
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>
