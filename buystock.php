@@ -62,6 +62,7 @@ if (isset($_POST['stockNameInput']))
     $replacementstocks . "' WHERE name='" . $player3['name'] . "'";
 
 
+
     mysql_query($updatequery) or die ("Could not update symbols");
     echo "Stock " . $targetsymbol . " bought for " . $targetprice;
     header("refresh:1; url=stockmarket.php");

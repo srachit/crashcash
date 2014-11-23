@@ -28,10 +28,10 @@ if (isset($_POST['symbol']) && isset($_POST['price']))
         if ($oldstocks[$i] != $targetsymbol)
         {
             $replacementstocks .= $oldstocks[$i];
+            if ($i < count($oldstocks)-1)
+                $replacementstocks .= ",";
         }
 
-        if ($i < count($oldstocks)-2)
-            $replacementstocks .= ",";
     }
 
     $newmoney = intval($player3['tmoney'] + $targetprice);
