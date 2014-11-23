@@ -64,9 +64,10 @@ $playerMoney = $player3['tmoney'];
                     <div class=row>
                         <div class="col-sm-3 col-md-2 sidebar">
                             <ul class="nav nav-sidebar">
-                                <li><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+                                <li><a href="game.php">Overview <span class="sr-only">(current)</span></a></li>
                                 <li><a href="stockmarket.php">Stock Market</a></li>
                                 <li><a href="education.php">Education</a></li>
+                                <li><a href="loan.php">Loan</a></li>
                             </ul>
                             <ul class="nav nav-sidebar">
                                 <li><a href="gamble.php">Gambling</a></li>
@@ -77,5 +78,14 @@ $playerMoney = $player3['tmoney'];
                 </div><!-- /.container-fluid -->
             </div>
         </nav>
+        
+            <div class="embed-responsive embed-responsive-16by9">
+                <iframe width="100" height="100" class="embed-responsive-item" frameborder="0" src="//www.youtube.com/embed/N-8uFw99IMw"></iframe>
+            </div>
+        
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="JS/bootstrap.min.js"></script>
     </body>
 </html>

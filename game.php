@@ -16,6 +16,11 @@
     $playerName = $player3['name']; 
     $playerEducation = $player3['profession'];
     $playerMoney = $player3['tmoney'];
+    $playerIntelligence = $player3['intelligence'];
+    $playerEnergy = $player3['tenergy'];
+    $playerTime = $player3['time'];
+    $playerTLoan = $player3['total_loan'];
+    $playerTLoan2 = $player3['loan'];
 ?>
 
 <!DOCTYPE html>
@@ -31,6 +36,7 @@
     <link href="CSS/bootstrap.min.css" rel="stylesheet">
     <link href="CSS/font-awesome.min.css" rel="stylesheet">
     <link href="CSS/style.css" rel="stylesheet">
+    <link href="CSS/game.css" rel="stylesheet">
 </head>
 
 <body>
@@ -67,6 +73,7 @@
                         <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
                         <li><a href="stockmarket.php">Stock Market</a></li>
                         <li><a href="education.php">Education</a></li>
+                        <li><a href="loan.php">Bank</a></li>
                     </ul>
                     <ul class="nav nav-sidebar">
                         <li><a href="gamble.php">Gambling</a></li>
@@ -74,10 +81,37 @@
                     </ul>
                 </div>
             </div>
-      </div><!-- /.container-fluid -->
+          </div><!-- /.container-fluid -->
+        </div>
     </nav><!-- End of Navbar -->
 
-    
+    <div class="container">
+        <div class="row">
+            <div class="box col-md-3">
+                <h3 class="text-center">Your Information</h1>
+                <p>Player Name: <?php echo $playerName;?></p>
+            </div>
+
+            <div class="box col-md-3">
+                <h3 class="text-center">Your Statistics</h3>
+                <p>Player Education: <?php echo $playerEducation; ?></p>
+                <p>Player Total Money: <?php echo $playerMoney; ?></p>
+                <p>Player Intelligence: <?php echo $playerIntelligence; ?></p>
+                <p>Player Energy: <?php echo $playerEnergy; ?></p>
+            </div>
+
+        </div>
+        
+        <div class="row">
+            <div class="box2 col-md-3">
+                <h3 class="text-center">Loan Information</h3>
+                <p>Loan Taken: <?php echo $playerTLoan2; ?></p>
+                <p>Money To Pay Back: <?php echo $playerTLoan; ?></p>
+                <p>Time Left To Pay Back: <?php echo $playerTime; ?></p>
+            </div>
+        </div> 
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
