@@ -41,7 +41,7 @@ $addFd = $_POST['fdAmount'];
     }
 
     if(isset($_POST['upgrade'])){
-        $updateplayer = "Update players set fixed_deposit= 0 ,tmoney = tmoney + fixed_deposit where name='$playerName'";
+        $updateplayer = "Update players set tmoney = tmoney + fixed_deposit, fixed_deposit= 0 where name='$playerName'";
         mysql_query($updateplayer) or die("no checkout");
 
         print   "You've checkout the deposit";
