@@ -125,10 +125,9 @@ if(isset($_POST['upgrade']))
                         <li><a href="game.php">Overview <span class="sr-only">(current)</span></a></li>
                         <li><a href="stockmarket.php">Stock Market</a></li>
                         <li class="active"><a href="#">Education</a></li>
-                        <li><a href="loan.php">Loan</a></li>
+                        <li><a href="loan.php">Bank</a></li>
                     </ul>
                     <ul class="nav nav-sidebar">
-                        <li><a href="bank.php">Bank</a></li>
                         <li><a href="gamble.php">Gambling</a></li>
                         <li><a href="elearn.php">Learn And Earn!</a></li>
                     </ul>

@@ -31,11 +31,12 @@ $addFd = $_POST['fdAmount'];
     {
         $var = $addFd + $playerFd;
         $var2 = $playerMoney - $addFd;
-        if ($addFd < $playerMoney){
+        if ($addFd <= $playerMoney){
                 $updateplayer = "Update players set fixed_deposit= '$var' ,tmoney = $var2 where name='$playerName'";
                 mysql_query($updateplayer) or die("no FD done");
 
                 print   "You've deposited in FD";
+                header("refresh:1; url=game.php");
         }
     }
 
@@ -44,6 +45,7 @@ $addFd = $_POST['fdAmount'];
         mysql_query($updateplayer) or die("no checkout");
 
         print   "You've checkout the deposit";
+        header("refresh:1; url=game.php");
     }
 
 
